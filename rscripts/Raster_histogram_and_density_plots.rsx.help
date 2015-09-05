@@ -1,0 +1,26 @@
+(dp0
+S'ALG_DESC'
+p1
+VThis algorithm generates a histogram or a density plot for the given raster. NOTE that you should not use this algorithm to process large rasters.
+p2
+sS'dens_or_hist'
+p3
+VUse 'hist' to produce histogram of the raster values (separate plots for each band) and 'dens' if you want to create a density plot (single plot for all bands).
+p4
+sS'ALG_CREATOR'
+p5
+VYury Ryabov\u000a2013\u000ariabovvv@gmail.com
+p6
+sS'layer'
+p7
+VA single- or multi-band raster.
+p8
+sS'RPLOTS'
+p9
+V
+p10
+sS'ALG_HELP_CREATOR'
+p11
+VYury Ryabov\u000a2013\u000ariabovvv@gmail.com
+p12
+s.

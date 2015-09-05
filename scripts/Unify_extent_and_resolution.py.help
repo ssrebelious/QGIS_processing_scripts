@@ -1,0 +1,34 @@
+(dp0
+S'replace_No_Data_value_with'
+p1
+VDue to you will most certanly want to perform some raster algebra including both of these rasters, pixels added to rasters will be filled with the value from this field. Also  No Data values of all rasters will be replaced with this value. Note that if you will leave this field blank these pixels will get the No Data value from the first raster, and if there won't be No Data value there, they will be assigned to -9999.
+p2
+sS'rasters'
+p3
+VRasters to be unified. Output rasters will have the same pixel size as the first raster in provided list.
+p4
+sS'ALG_DESC'
+p5
+VThis scripts changes extent and resolution of two rasters to fit each other.
+p6
+sS'raster_2'
+p7
+VSecond raster. Must have the same coordinate reference system as the first raster.
+p8
+sS'raster_1'
+p9
+VFirst raster. Resulting rasters will have the same pixel sise as this raster. 
+p10
+sS'ALG_CREATOR'
+p11
+VYury Ryabov\u000ariabovvv@gmail.com\u000ahttp://ssrebelious.blogspot.com\u000a2013\u000a
+p12
+sS'output_directory'
+p13
+VTwo resulting rasters will be saved here. This field must not be empty
+p14
+sS'ALG_HELP_CREATOR'
+p15
+VYury Ryabov\u000ariabovvv@gmail.com\u000ahttp://ssrebelious.blogspot.com\u000a2013\u000a
+p16
+s.

@@ -1,0 +1,26 @@
+(dp0
+S'ALG_DESC'
+p1
+VPerforms pansharpening.
+p2
+sS'ALG_CREATOR'
+p3
+VYury Ryabov\u000a2015\u000ariabovvv@gmail.com
+p4
+sS'-out_ALG1'
+p5
+VPansharpened raster
+p6
+sS'ALG_HELP_CREATOR'
+p7
+VYury Ryabov\u000a2015\u000ariabovvv@gmail.com
+p8
+sVRASTERLAYER_PANCHROMERASTER
+p9
+VHigh-resolution panchrome raster
+p10
+sVRASTERLAYER_MULTIBANDRASTER
+p11
+VRaster to be pansharpened.
+p12
+s.

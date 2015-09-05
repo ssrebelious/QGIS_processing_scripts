@@ -1,0 +1,152 @@
+{
+    "values": {
+        "inputs": {
+            "RASTERLAYER_HIGHRESOLUTIONPANCHROMATICRASTER": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 55.0, 
+                            "x": 121.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "RASTERLAYER_HIGHRESOLUTIONPANCHROMATICRASTER", 
+                            "showSublayersDialog": true, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "High_resolution_panchromatic_raster"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "RASTERLAYER_LOWRESOLUTIONMULTISPECTRALRASTER": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 55.0, 
+                            "x": 342.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "RASTERLAYER_LOWRESOLUTIONMULTISPECTRALRASTER", 
+                            "showSublayersDialog": true, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Low_resolution_multispectral_raster"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "Raster processing", 
+        "name": "OTB Pan-sharpening", 
+        "algs": {
+            "OTBPANSHARPENINGRCS_1": {
+                "values": {
+                    "name": "OTBPANSHARPENINGRCS_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "-out": {
+                            "values": {
+                                "description": "Panshrpened_OTB", 
+                                "pos": {
+                                    "values": {
+                                        "y": 311.0, 
+                                        "x": 556.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 266.0, 
+                            "x": 356.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "-inp": {
+                            "values": {
+                                "name": "RASTERLAYER_HIGHRESOLUTIONPANCHROMATICRASTER"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "-inxs": {
+                            "values": {
+                                "alg": "OTBSUPERIMPOSESENSOR_1", 
+                                "output": "-out"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "-ram": 4096.0, 
+                        "-method": 0
+                    }, 
+                    "active": true, 
+                    "consoleName": "otb:pansharpeningrcs", 
+                    "description": "Pansharpening (rcs)"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "OTBSUPERIMPOSESENSOR_1": {
+                "values": {
+                    "name": "OTBSUPERIMPOSESENSOR_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 182.0, 
+                            "x": 133.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "-interpolator": 0, 
+                        "-inm": {
+                            "values": {
+                                "name": "RASTERLAYER_LOWRESOLUTIONMULTISPECTRALRASTER"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "-lms": 4.0, 
+                        "-interpolator.bco.radius": 2.0, 
+                        "-ram": 4096.0, 
+                        "-inr": {
+                            "values": {
+                                "name": "RASTERLAYER_HIGHRESOLUTIONPANCHROMATICRASTER"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "-elev.default": 0.0
+                    }, 
+                    "active": true, 
+                    "consoleName": "otb:superimposesensor", 
+                    "description": "Superimpose sensor"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}
